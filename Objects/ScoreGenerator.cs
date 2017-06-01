@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace ScrabbleScore
@@ -62,6 +63,20 @@ namespace ScrabbleScore
         }
       }
       return score;
+    }
+
+    public static bool IsValid(string testWord)
+    {
+      int wordLength = testWord.Length;
+      int alphas = testWord.Count(char.IsLetter);
+      if(alphas == wordLength)
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
     }
   }
 }

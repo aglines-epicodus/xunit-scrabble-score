@@ -82,6 +82,13 @@ namespace ScrabbleScore
       Assert.Equal(testScore, result);
     }
 
-
+    [Fact]
+    public void IsValid_DetectsInvalidCharacters_false()
+    {
+      string input = "qw3.-a jaskdj=[``]";
+      bool expectedResult = false;
+      bool result = ScoreGenerator.IsValid(input);
+      Assert.Equal(expectedResult, result);
+    }
   }
 }

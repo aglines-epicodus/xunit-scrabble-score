@@ -15,6 +15,7 @@ namespace ScrabbleScore
         string userInput = Request.Form["user-input"];
         int score = ScoreGenerator.GenerateScore(userInput);
         string scoreAsString = score.ToString();
+        // bool isValidWord = Object.Method(userInput);
 
         Dictionary<string, string> model = new Dictionary<string, string>{};
 

@@ -35,5 +35,14 @@ namespace ScrabbleScore
       int result = ScoreGenerator.GenerateScore(testInput);
       Assert.Equal(testScore, result);
     }
+
+    [Fact]
+    public void GenerateScore_CountsLetterScore_4PointLetters()
+    {
+      string testInput = "fhvwy";
+      int testScore =  20;
+      int result = ScoreGenerator.GenerateScore(testInput);
+      Assert.Equal(testScore, result);
+    }
   }
 }

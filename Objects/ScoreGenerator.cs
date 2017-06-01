@@ -16,7 +16,7 @@ namespace ScrabbleScore
       string oneScoreLetters = "aeioulnrst";
       string twoScoreLetters = "dg";
       string threeScoreLetters = "bcmp";
-      string fourScoreLetters = "fhvmy";
+      string fourScoreLetters = "fhvwy";
       string fiveScoreLetters = "k";
       string eightScoreLetters = "jx";
       string tenScoreLetters = "qz";
@@ -43,6 +43,10 @@ namespace ScrabbleScore
         if(threeScoreLetters.Contains(inputAsCharArray[i].ToString()))
         {
           score += threeletterscore;
+        }
+        if(fourScoreLetters.Contains(inputAsCharArray[i].ToString()))
+        {
+          score += fourletterscore;
         }
       }
       return score;

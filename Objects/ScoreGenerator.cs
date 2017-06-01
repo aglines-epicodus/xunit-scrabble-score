@@ -48,6 +48,18 @@ namespace ScrabbleScore
         {
           score += fourletterscore;
         }
+        if(fiveScoreLetters.Contains(inputAsCharArray[i].ToString()))
+        {
+          score += fiveletterscore;
+        }
+        if(eightScoreLetters.Contains(inputAsCharArray[i].ToString()))
+        {
+          score += eightletterscore;
+        }
+        if(tenScoreLetters.Contains(inputAsCharArray[i].ToString()))
+        {
+          score += tenletterscore;
+        }
       }
       return score;
     }

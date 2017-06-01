@@ -9,17 +9,19 @@ namespace ScrabbleScore
     public static int GenerateScore(string userInput)
     {
       int score = 0;
-      string oneScoreLetters = "aeioulnrst";
-      // alphabet as list of chars
-      // string alphabet = "abcdefghijklmnopqrstuvwxyz";
-      // char[] alphabetAsCharArray = alphabet.ToCharArray();
-      // user input as string
-        // is already the argument of the method
-      // convert to char array
+
       string inputToLower = userInput.ToLower();
       char[] inputAsCharArray = inputToLower.ToCharArray();
 
-      // int for scoring
+      string oneScoreLetters = "aeioulnrst";
+      string twoScoreLetters = "dg";
+      string threeScoreLetters = "bcmp";
+      string fourScoreLetters = "fhvmy";
+      string fiveScoreLetters = "k";
+      string eightScoreLetters = "jx";
+      string tenScoreLetters = "qz";
+
+
       int Oneletterscore = 1;
       int Twoletterscore = 2;
       int Threeletterscore = 3;
@@ -39,10 +41,12 @@ namespace ScrabbleScore
         {
           score += Oneletterscore;
         }
+        if(twoScoreLetters.Contains(inputAsCharArray[i].ToString()))
+        {
+          score += Twoletterscore;
+        }
       }
-      // produce score
       return score;
-
     }
   }
 }

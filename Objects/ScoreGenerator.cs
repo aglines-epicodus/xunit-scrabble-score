@@ -9,6 +9,7 @@ namespace ScrabbleScore
     public static int GenerateScore(string userInput)
     {
       int score = 0;
+      string oneScoreLetters = "aeioulnrst";
       // alphabet as list of chars
       // string alphabet = "abcdefghijklmnopqrstuvwxyz";
       // char[] alphabetAsCharArray = alphabet.ToCharArray();
@@ -30,7 +31,11 @@ namespace ScrabbleScore
       // for loop over input array, sum score @ each hit
       for (int i = 0; i < inputAsCharArray.Length ; i++)
       {
-        if (inputAsCharArray[i] == 'a' || inputAsCharArray[i] == 'e' || inputAsCharArray[i] == 'i' || inputAsCharArray[i] == 'o' || inputAsCharArray[i] == 'u' || inputAsCharArray[i] == 'l' || inputAsCharArray[i] == 'n' || inputAsCharArray[i] == 'r' || inputAsCharArray[i] == 's' || inputAsCharArray[i] == 't')
+        // if (inputAsCharArray[i] == 'a' || inputAsCharArray[i] == 'e' || inputAsCharArray[i] == 'i' || inputAsCharArray[i] == 'o' || inputAsCharArray[i] == 'u' || inputAsCharArray[i] == 'l' || inputAsCharArray[i] == 'n' || inputAsCharArray[i] == 'r' || inputAsCharArray[i] == 's' || inputAsCharArray[i] == 't')
+        // {
+        //   score += Oneletterscore;
+        // }
+        if(oneScoreLetters.Contains(inputAsCharArray[i].ToString()))
         {
           score += Oneletterscore;
         }

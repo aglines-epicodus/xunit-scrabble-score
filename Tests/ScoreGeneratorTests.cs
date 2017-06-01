@@ -18,6 +18,4 @@ namespace ScrabbleScore
       Assert.Equal(testScore, result);
     }
   }
-
-
 }

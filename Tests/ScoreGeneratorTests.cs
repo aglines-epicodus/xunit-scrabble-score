@@ -26,5 +26,14 @@ namespace ScrabbleScore
       int result = ScoreGenerator.GenerateScore(testInput);
       Assert.Equal(testScore, result);
     }
+
+    [Fact]
+    public void GenerateScore_CountsLetterScore_3PointLetters()
+    {
+      string testInput = "bcmp";
+      int testScore =  12;
+      int result = ScoreGenerator.GenerateScore(testInput);
+      Assert.Equal(testScore, result);
+    }
   }
 }

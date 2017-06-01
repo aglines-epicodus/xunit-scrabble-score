@@ -1,0 +1,15 @@
+form {
+  width: 50%;
+  margin: auto;
+}
+
+#body {
+  width: 60%;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+body {
+  background-color: #87cefa;
+}

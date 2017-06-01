@@ -68,7 +68,7 @@ namespace ScrabbleScore
     public static bool IsValid(string testWord)
     {
       int wordLength = testWord.Length;
-      int alphas = testWord.Count(char.IsLetter);
+      int alphas = testWord.Count(char.IsLetter) + testWord.Count(char.IsWhiteSpace);
       if(alphas == wordLength)
       {
         return true;

@@ -15,12 +15,14 @@ namespace ScrabbleScore
         string userInput = Request.Form["user-input"];
         int score = ScoreGenerator.GenerateScore(userInput);
         string scoreAsString = score.ToString();
-        // bool isValidWord = Object.Method(userInput);
+        bool IsValidWord = ScoreGenerator.IsValid(userInput);
+        string validityAsString = IsValidWord.ToString();
 
         Dictionary<string, string> model = new Dictionary<string, string>{};
 
         model.Add("input", userInput);
         model.Add("score", scoreAsString);
+        model.Add("validity", validityAsString);
         return View["index.cshtml", model];
       };
     }
